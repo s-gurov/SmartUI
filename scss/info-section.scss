@@ -1,0 +1,54 @@
+@use "constants.scss";
+
+.info-section {
+  @include constants.container;
+  height: 430px;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  @media screen and (max-width: constants.$device-width-laptop) {
+    gap: 20px;
+  }
+  @media screen and (max-width: constants.$device-width-tablet) {
+    gap: 0;
+    flex-direction: column;
+    height: auto;
+    & > .info-item {
+      margin: constants.$spacing-unit * 2 0 ;
+    }
+  }
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__img {
+    height: 110px;
+    width: 110px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin: constants.$spacing-unit * 2 0;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    max-width: 360px;
+  }
+  @media screen and (max-width: constants.$device-width-tablet) {
+    &__img {
+      height: 150px;
+      width: 150px;
+      margin: 0 auto;
+    }
+  }
+}

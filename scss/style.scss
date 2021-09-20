@@ -1,0 +1,9 @@
+@use "reset.scss";
+@use "main-banner.scss";
+@import "app-intro.scss";
+@import "info-section.scss";
+@import "review.scss";
+
+body {
+  font-family: Lato, Helvetica, sans-serif;
+}
