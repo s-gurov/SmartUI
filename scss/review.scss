@@ -8,9 +8,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   & > :not(:last-child) {
     margin-bottom: constants.$spacing-unit * 3;
   }
+
   @media screen and (max-width: constants.$device-width-tablet) {
     & > :not(:last-child) {
       margin-bottom: constants.$spacing-unit * 2;
@@ -27,6 +29,7 @@
     font-weight: 100;
     color: rgb(255, 255, 255, 0.7);
     text-align: center;
+
     @media screen and (max-width: constants.$device-width-tablet) {
       font-size: 24px;
     }
@@ -50,6 +53,7 @@
     background-color:rgb(255, 255, 255, 0.3);
     border-radius: 50%;
     display: inline-block;
+
     &_active {
       height: 10px;
       width: 10px;

@@ -173,6 +173,12 @@ html, body {
   position: relative;
   z-index: -10;
 }
+@media screen and (max-width: 768px) {
+  .app-intro {
+    height: auto;
+    min-height: 500px;
+  }
+}
 .app-intro__wrapper {
   width: 65%;
   margin: 0 auto;
@@ -226,12 +232,6 @@ html, body {
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin: 32px 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .app-intro {
-    height: auto;
-    min-height: 500px;
   }
 }
 .app-intro__phone {
@@ -453,6 +453,280 @@ html, body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.cuisines__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  height: 165px;
+  text-align: center;
+  padding-top: 90px;
+}
+.cuisines__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+@media screen and (max-width: 480px) {
+  .cuisines__container {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+  }
+}
+
+.cuisines-card {
+  position: relative;
+  height: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 1440px) {
+  .cuisines-card {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .cuisines-card {
+    height: 180px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cuisines-card {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cuisines-card {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cuisines-card {
+    height: 250px;
+  }
+}
+.cuisines-card__recipes {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px 0px 10px black;
+}
+@media screen and (max-width: 768px) {
+  .cuisines-card__recipes {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cuisines-card__recipes {
+    font-size: 16px;
+  }
+}
+.cuisines-card__name {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  margin: 4px 0 0 0;
+  text-shadow: 0px 0px 10px black;
+}
+@media screen and (max-width: 1200px) {
+  .cuisines-card__name {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cuisines-card__name {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cuisines-card__name {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cuisines-card__name {
+    font-size: 24px;
+  }
+}
+.cuisines-card__img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.numbers {
+  width: 80%;
+  margin: 0 auto;
+  height: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 480px) {
+  .numbers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .numbers {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .numbers {
+    height: auto;
+  }
+  .numbers > .numbers__item {
+    margin: 16px 0;
+  }
+}
+.numbers__item {
+  text-align: center;
+  width: 100%;
+}
+.numbers__value {
+  font-size: 36px;
+  font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .numbers__value {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .numbers__value {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .numbers__value {
+    font-size: 26px;
+  }
+}
+.numbers__text {
+  color: rgba(0, 0, 0, 0.5);
+  margin: 8px 0 0 0;
+}
+@media screen and (max-width: 1024px) {
+  .numbers__text {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .numbers__text {
+    font-size: 16px;
+  }
+}
+
+.footer {
+  height: 95px;
+  background-color: #f7f7f7;
+}
+.footer__container {
+  width: 65%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .footer__container {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer__container {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+.footer__copyright {
+  font-size: 14px;
+  color: rgba(139, 139, 139, 0.9);
+}
+@media screen and (max-width: 768px) {
+  .footer__copyright {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__copyright {
+    font-size: 14px;
+  }
+}
+.footer__design-by {
+  font-size: 14px;
+  color: rgba(139, 139, 139, 0.9);
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .footer__design-by {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__design-by {
+    font-size: 14px;
+  }
 }
 
 body {

@@ -6,13 +6,16 @@
   display: flex;
   gap: 40px;
   justify-content: space-between;
+
   @media screen and (max-width: constants.$device-width-laptop) {
     gap: 20px;
   }
+
   @media screen and (max-width: constants.$device-width-tablet) {
     gap: 0;
     flex-direction: column;
     height: auto;
+
     & > .info-item {
       margin: constants.$spacing-unit * 2 0 ;
     }
@@ -44,6 +47,7 @@
     line-height: 1.4;
     max-width: 360px;
   }
+
   @media screen and (max-width: constants.$device-width-tablet) {
     &__img {
       height: 150px;

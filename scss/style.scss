@@ -1,8 +1,11 @@
 @use "reset.scss";
 @use "main-banner.scss";
-@import "app-intro.scss";
-@import "info-section.scss";
-@import "review.scss";
+@use "app-intro.scss";
+@use "info-section.scss";
+@use "review.scss";
+@use "cuisines.scss";
+@use "numbers.scss";
+@use "footer.scss";
 
 body {
   font-family: Lato, Helvetica, sans-serif;
