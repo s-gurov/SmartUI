@@ -1,0 +1,47 @@
+@use "constants.scss";
+
+.footer {
+  height: 95px;
+  background-color: #f7f7f7;
+
+  &__container {
+    @include constants.container;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+    @media screen and (max-width: constants.$device-width-mobile) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: rgba(139, 139, 139, 0.9);
+    
+    @media screen and (max-width: constants.$device-width-tablet) {
+      font-size: 12px;
+    }
+    
+    @media screen and (max-width: constants.$device-width-mobile) {
+      font-size: 14px;
+    }
+  }
+
+  &__design-by {
+    font-size: 14px;
+    color: rgba(139, 139, 139, 0.9);
+    text-transform: uppercase;
+    
+    @media screen and (max-width: constants.$device-width-tablet) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: constants.$device-width-mobile) {
+      font-size: 14px;
+    }
+  }
+}

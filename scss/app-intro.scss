@@ -1,78 +1,96 @@
 @use "constants.scss";
 
 .app-intro {
+  height: 880px;
+  background-color: #f7f7f7;
+  position: relative;
+  z-index: -10;
+
+  @media screen and (max-width: constants.$device-width-tablet) {
+    height: auto;
+    min-height: 500px;
+  }
+
   &__wrapper {
     @include constants.container;
     height: 100%;
     display: flex;
     justify-content: flex-end;
+
     @media screen and (max-width: constants.$device-width-laptop) {
       justify-content: center;
     }
   }
+
   &__description-area {
     max-width: 540px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+
     @media screen and (max-width: constants.$device-width-tablet) {
       justify-content: flex-start;
       margin: constants.$spacing-unit * 4 0;
     }
   }
-  height: 880px;
-  background-color: #f7f7f7;
-  position: relative;
-  z-index: -10;
-  @media screen and (max-width: constants.$device-width-tablet) {
-    height: auto;
-    min-height: 500px;
-  }
+
   &__phone {
     position: absolute;
     left: 15%;
     bottom: -180px;
     z-index: -5;
+
     @media screen and (max-width: 1620px) {
       left: 10%;
     }
+
     @media screen and (max-width: 1510px) {
       left: 5%;
     }
+
     @media screen and (max-width: 1410px) {
       opacity: 0.2;
     }
+
     @media screen and (max-width: constants.$device-width-laptop) {
       left: 10%;
     }
+
     @media screen and (max-width: constants.$device-width-tablet) {
       left: 50%;
       transform: translateX(-50%) scale(0.5);
       bottom: -330px;
     }
   }
+
   &__title {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 18px;
   }
+
   &__text {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.4;
     text-align: justify;
+
     @media screen and (max-width: 1410px) {
       font-weight: 400;
     }
+
     & > p {
       margin: constants.$spacing-unit * 2 0 0 0;
     }
   }
+
   &__available-on {
     margin: constants.$spacing-unit * 2 0 0 0;
+
     & > a {
       margin-right: constants.$spacing-unit;
+
       &:last-child {
         margin-right: 0;
       }
