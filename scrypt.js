@@ -123,3 +123,12 @@ let signUpModalSignUp = document.getElementById("signUpModalSignUp");
 signUpModalOpen.onclick = () => signUpModal.style.display = "block";
 signUpModalClose.onclick = () => signUpModal.style.display = "none";
 signUpModalSignUp.onclick = () => signUpModal.style.display = "none";
+
+window.onclick = function(event) {
+  if (event.target.parentElement == logInModal) {
+    logInModal.style.display = "none";
+  }
+  if (event.target.parentElement == signUpModal) {
+    signUpModal.style.display = "none";
+  }
+}
