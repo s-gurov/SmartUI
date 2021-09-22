@@ -37,6 +37,11 @@
     font-size: 14px;
     text-transform: uppercase;
     color: white;
+    transition: color 0.5s;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.7);
+    }
   }
 
   &__item {
@@ -85,7 +90,7 @@
     }
   }
 
-  &_button {
+  &__button {
     font-size: 18px;
     font-weight: bold;
     color: inherit;
@@ -94,6 +99,11 @@
     padding: 20px 80px;
     margin: constants.$spacing-unit * 4 0;
     text-transform: uppercase;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
     @media screen and (max-width: constants.$device-width-mobile) {
       margin: constants.$spacing-unit * 3 0;

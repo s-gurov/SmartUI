@@ -94,6 +94,11 @@ html, body {
   font-size: 14px;
   text-transform: uppercase;
   color: white;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+.actions__link:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 .actions__item {
   margin-right: 32px;
@@ -146,7 +151,7 @@ html, body {
     font-size: 75px;
   }
 }
-.call-to-action_button {
+.call-to-action__button {
   font-size: 18px;
   font-weight: bold;
   color: inherit;
@@ -155,9 +160,14 @@ html, body {
   padding: 20px 80px;
   margin: 32px 0;
   text-transform: uppercase;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.call-to-action__button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 @media screen and (max-width: 480px) {
-  .call-to-action_button {
+  .call-to-action__button {
     margin: 24px 0;
   }
 }
@@ -273,6 +283,13 @@ html, body {
   font-weight: bold;
   font-size: 18px;
 }
+.app-intro__title::after {
+  border-bottom: 1px solid red;
+  width: 70px;
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
 .app-intro__text {
   font-size: 16px;
   font-weight: 300;
@@ -369,6 +386,13 @@ html, body {
   font-size: 18px;
   margin: 16px 0;
 }
+.info-item__title::after {
+  border-bottom: 1px solid red;
+  width: 70px;
+  display: block;
+  content: "";
+  margin: 10px auto 0 auto;
+}
 .info-item__description {
   font-size: 16px;
   font-weight: 300;
@@ -462,6 +486,13 @@ html, body {
   height: 165px;
   text-align: center;
   padding-top: 90px;
+}
+.cuisines__title::after {
+  border-bottom: 1px solid red;
+  width: 70px;
+  display: block;
+  content: "";
+  margin: 10px auto 0 auto;
 }
 .cuisines__container {
   display: -ms-grid;
@@ -727,6 +758,119 @@ html, body {
   .footer__design-by {
     font-size: 14px;
   }
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.modal__input {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  color: white;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.modal__input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+.modal__submit {
+  margin-top: 20px !important;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #751045;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.modal__submit:hover {
+  background-color: #680f3d;
+}
+.modal__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 10px;
+}
+.modal__content {
+  width: 400px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#a78870), to(#371b49));
+  background: linear-gradient(0deg, #a78870 0%, #371b49 100%);
+  color: white;
+  padding: 40px;
+  position: relative;
+  text-align: center;
+}
+.modal__close {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+.modal__close:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.modal__icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 20px;
+}
+.modal__title {
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+}
+.modal__form ::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal__form ::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal__form :-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal__form ::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal__form ::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal__form > :not(:first-child) {
+  margin-top: 15px;
+}
+.modal__sign-up {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 
 body {

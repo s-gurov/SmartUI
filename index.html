@@ -16,10 +16,10 @@
       <nav class="header__actions actions">
         <ul class="actions__list">
           <li class="actions__item">
-            <a href="#" class="actions__link">log in</a>
+            <a href="#" class="actions__link" id="logInModalOpen">log in</a>
           </li>
           <li class="actions__item">
-            <a href="#" class="actions__link">sign in</a>
+            <a href="#" class="actions__link" id="signUpModalOpen">sign in</a>
           </li>
           <li class="actions__item">
             <button type="button" class="actions__menu-button">
@@ -32,7 +32,7 @@
     <div class="call-to-action">
       <div class="call-to-action__secondary-text">Find your Favorite</div>
       <h1 class="call-to-action__main-text">recipes</h1>
-      <button class="call-to-action_button">get started</button>
+      <button class="call-to-action__button">get started</button>
       <div class="call-to-action__sub-text">or send us your own recipes and <u><b>get rewarded!</b></u></div>
     </div>
     <img class="main-banner__image" src="img/main-image.jpg" alt="">
@@ -131,6 +131,37 @@
     <div class="footer__container">
       <div class="footer__copyright">©2014 Fudi. All Rights Reserved.</div>
       <div class="footer__design-by">design by: <b>www.bekades.com</b></div>
+    </div>
+  </div>
+  <div class="modal" id="logInModal">
+    <div class="modal__body">
+      <div class="modal__content">
+        <button class="modal__close" id="logInModalClose"><</button>
+        <img src="img/logo.png" alt="fudi" class="modal__icon">
+        <div class="modal__title">log-in</div>
+        <form class="modal__form" action="#">
+          <input class="modal__input" type="text" name="username" placeholder="Username or email">
+          <input class="modal__input" type="text" name="password" placeholder="Password">
+          <input class="modal__submit" id="logInModalSignUp" type="submit" value="log in">
+        </form>
+        <div class="modal__sign-up">don't have an account? <u>sign up</u></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="signUpModal">
+    <div class="modal__body">
+      <div class="modal__content">
+        <button class="modal__close" id="signUpModalClose"><</button>
+        <img src="img/logo.png" alt="fudi" class="modal__icon">
+        <div class="modal__title">sign-up</div>
+        <form class="modal__form" action="#">
+          <input class="modal__input" type="text" name="username" placeholder="Username">
+          <input class="modal__input" type="text" name="email" placeholder="Email">
+          <input class="modal__input" type="text" name="password" placeholder="Password">
+          <input class="modal__submit" id="signUpModalSignUp" type="submit" value="sign up">
+        </form>
+        <div class="modal__sign-up">if you already have an account<br><u>log in</u></div>
+      </div>
     </div>
   </div>
   <script src="scrypt.js"></script>
