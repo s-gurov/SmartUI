@@ -104,3 +104,22 @@ function getCuisineHtml(name, recipes, img) {
             <img src="${img}" alt="steachouse" class="cuisines-card__img">
           </div>`;
 }
+
+// Log in / Sign up forms
+let logInModal = document.getElementById("logInModal");
+let logInModalClose = document.getElementById("logInModalClose");
+let logInModalOpen = document.getElementById("logInModalOpen");
+let logInModalSignUp = document.getElementById("logInModalSignUp");
+
+logInModalOpen.onclick = () => logInModal.style.display = "block";
+logInModalClose.onclick = () => logInModal.style.display = "none";
+logInModalSignUp.onclick = () => logInModal.style.display = "none";
+
+let signUpModal = document.getElementById("signUpModal");
+let signUpModalClose = document.getElementById("signUpModalClose");
+let signUpModalOpen = document.getElementById("signUpModalOpen");
+let signUpModalSignUp = document.getElementById("signUpModalSignUp");
+
+signUpModalOpen.onclick = () => signUpModal.style.display = "block";
+signUpModalClose.onclick = () => signUpModal.style.display = "none";
+signUpModalSignUp.onclick = () => signUpModal.style.display = "none";

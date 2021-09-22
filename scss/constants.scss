@@ -19,3 +19,24 @@ $spacing-unit: 8px;
     width: 90%;
   }
 }
+
+@mixin lineTitle($position) {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+
+  &::after {
+    border-bottom: 1px solid rgb(255, 0, 0);
+    width: 70px;
+    display: block;
+    content: "";
+
+    @if $position == center {
+      margin: 10px auto 0 auto;
+    }
+
+    @if $position == start {
+      margin-top: 10px;
+    }
+  }
+}

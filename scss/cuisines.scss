@@ -3,9 +3,7 @@
 .cuisines {
   
   &__title {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 18px;
+    @include constants.lineTitle("center");
     height: 165px;
     text-align: center;
     padding-top: 90px;
